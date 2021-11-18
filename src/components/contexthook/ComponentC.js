@@ -12,7 +12,7 @@ function ComponentC() {
                               {
                                   batch =>{
                                       return <div>
-                                            user name is {user}, his batch is {batch}
+                                            user name is {user}, her batch is {batch}
                                         </div>
                                   }
                               }

@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import ComponentA from './components/contexthook/ComponentA';
+import React from 'react';
+
+
+export const UserContext = React.createContext()
+export const BatchContext = React.createContext()
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserContext.Provider value={'mansi'} >
+        <BatchContext.Provider value={'dxc batch 2'}>
+          <ComponentA />
+        </BatchContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
